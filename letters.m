@@ -112,4 +112,4 @@ str = lower(str)
   x = 1:26;
   y1 = [numA numB numC numD numE numF numG numH numI numJ numK numL numM numN numO numP numQ numR numS numT numU numV numW numX numY numZ];
   bar(x, y1, 0.75, 'r')
-  set(gca, 'xtick', [1:26], 'xticklabel', lettersX);
+  set(gca, 'xtick', (1:26), 'xticklabel', lettersX);
