@@ -84,8 +84,7 @@ for i = 1:length(str)
       end
 end
 x = 1:26;
-y1 = [numA numB numC numD numE numF numG numH numI numJ numK numL numM numN numO numP numQ numR numS numT numU numV numW numX numY numZ];
-bar(x, y1, 0.75, 'r')
+bar(x, letter_values, 0.75, 'r')
 set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'})
 xlabel('Letters')
 ylabel('Frequency')
