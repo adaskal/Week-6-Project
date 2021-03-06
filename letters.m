@@ -108,6 +108,8 @@ str = lower(str)
           numZ = numZ+1;
       end
   end
+  lettersX = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
   x = 1:26;
   y1 = [numA numB numC numD numE numF numG numH numI numJ numK numL numM numN numO numP numQ numR numS numT numU numV numW numX numY numZ];
   bar(x, y1, 0.75, 'r')
+  set(gca, 'xtick', [1:26], 'xticklabel', lettersX);
