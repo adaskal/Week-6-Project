@@ -186,7 +186,7 @@ url = "https://www.poetryfoundation.org/poems/45085/the-phoenix-and-the-turtle-5
 code = webread(url);
 str5 = extractHTMLText(code);
 str5 = lower(str5);
-str6 = str5(58:2201)
+str6 = str5(58:2201);
 letter_values3 = zeros(1,26);
 for i = 1:length(str6)
     if (str6(i) == 'a') 
@@ -270,10 +270,101 @@ for i = 1:length(str6)
 end
 length(str6);
 
+%English 1700s
+
+url = "https://www.poetryfoundation.org/poems/52632/on-imagination";
+code = webread(url);
+str7 = extractHTMLText(code);
+str7 = lower(str7);
+str8 = str7(43:2421);
+letter_values4 = zeros(1,26);
+for i = 1:length(str8)
+    if (str8(i) == 'a') 
+          letter_values4(1) = letter_values4(1)+1;
+      end    
+      if (str8(i) == 'b') 
+          letter_values4(2) = letter_values4(2)+1;
+      end
+      if (str8(i) == 'c') 
+          letter_values4(3) = letter_values4(3)+1;
+      end    
+      if (str8(i) == 'd') 
+          letter_values4(4) = letter_values4(4)+1;
+      end
+      if (str8(i) == 'e') 
+          letter_values4(5) = letter_values4(5)+1;
+      end    
+      if (str8(i) == 'f') 
+          letter_values4(6) = letter_values4(6)+1;
+      end
+      if (str8(i) == 'g') 
+          letter_values4(7) = letter_values4(7)+1;
+      end    
+      if (str8(i) == 'h') 
+          letter_values4(8) = letter_values4(8)+1;
+      end
+      if (str8(i) == 'i') 
+          letter_values4(9) = letter_values4(9)+1;
+      end    
+      if (str8(i) == 'j') 
+          letter_values4(10) = letter_values4(10)+1;
+      end
+      if (str8(i) == 'k') 
+          letter_values4(11) = letter_values4(11)+1;
+      end    
+      if (str8(i) == 'l') 
+          letter_values4(12) = letter_values4(12)+1;
+      end
+      if (str8(i) == 'm') 
+          letter_values4(13) = letter_values4(13)+1;
+      end
+      if (str8(i) == 'n') 
+          letter_values4(14) = letter_values4(14)+1;
+      end    
+      if (str8(i) == 'o') 
+          letter_values4(15) = letter_values4(15)+1;
+      end
+      if (str8(i) == 'p') 
+          letter_values4(16) = letter_values4(16)+1;
+      end    
+      if (str8(i) == 'q') 
+          letter_values4(17) = letter_values4(17)+1;
+      end
+      if (str8(i) == 'r') 
+          letter_values4(18) = letter_values4(18)+1;
+      end    
+      if (str8(i) == 's') 
+          letter_values4(19) = letter_values4(19)+1;
+      end
+      if (str8(i) == 't') 
+          letter_values4(20) = letter_values4(20)+1;
+      end    
+      if (str8(i) == 'u') 
+          letter_values4(21) = letter_values4(21)+1;
+      end
+      if (str8(i) == 'v') 
+          letter_values4(22) = letter_values4(22)+1;
+      end    
+      if (str8(i) == 'w') 
+          letter_values4(23) = letter_values4(23)+1;
+      end
+      if (str8(i) == 'x') 
+          letter_values4(24) = letter_values4(24)+1;
+      end    
+      if (str8(i) == 'y') 
+          letter_values4(25) = letter_values4(25)+1;
+      end
+      if (str8(i) == 'z') 
+          letter_values4(26) = letter_values4(26)+1;
+      end
+end
+length(str8);
+
+
 
 
 h1 = figure;
-subplot(2,2,1)
+subplot(2,2,3)
 x = 1:26;
 bar(x, letter_values/length(str2), 0.75, 'r');
 set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'});
@@ -281,7 +372,7 @@ xlabel('Letters')
 ylabel('Frequency')
 title('Frequency of letters- The Raven (1800s)')
 
-subplot(2,2,2)
+subplot(2,2,4)
 x = 1:26;
 bar(x, letter_values2/length(str4), 0.75, 'r');
 set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'});
@@ -289,11 +380,20 @@ xlabel('Letters')
 ylabel('Frequency')
 title('Frequency of letters- The Road Not Taken (1900s)')
 
-subplot(2,2,3)
+subplot(2,2,1)
 x = 1:26;
 bar(x, letter_values3/length(str6), 0.75, 'r');
 set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'});
 xlabel('Letters')
 ylabel('Frequency')
 title('Frequency of letters- The Phoenix and the Turtle (1600s)')
+
+subplot(2,2,2)
+x = 1:26;
+bar(x, letter_values4/length(str8), 0.75, 'r');
+set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'});
+xlabel('Letters')
+ylabel('Frequency')
+title('Frequency of letters- On Imagination  (1700s)')
+
 
