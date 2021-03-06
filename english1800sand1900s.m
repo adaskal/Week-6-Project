@@ -6,7 +6,7 @@ str = lower(str);
 str2 = str(37:6465);
 letter_values = zeros(1,26);
 for i = 1:length(str2)
-    if (str2(i) == 'a') 
+      if (str2(i) == 'a') 
           letter_values(1) = letter_values(1)+1;
       end    
       if (str2(i) == 'b') 
@@ -93,108 +93,107 @@ length(str2);
 %English 1900s
 url = "https://www.poetryfoundation.org/poems/44272/the-road-not-taken";
 code = webread(url);
-str = extractHTMLText(code);
-str = lower(str);
-str2 = str(78:840);
+str3 = extractHTMLText(code);
+str3 = lower(str3);
+str4 = str3(78:840);
 letter_values2 = zeros(1,26);
-for i = 1:length(str2)
-    if (str2(i) == 'a') 
+for i = 1:length(str4)
+      if (str4(i) == 'a') 
           letter_values2(1) = letter_values2(1)+1;
       end    
-      if (str2(i) == 'b') 
+      if (str4(i) == 'b') 
           letter_values2(2) = letter_values2(2)+1;
       end
-      if (str2(i) == 'c') 
+      if (str4(i) == 'c') 
           letter_values2(3) = letter_values2(3)+1;
       end    
-      if (str2(i) == 'd') 
+      if (str4(i) == 'd') 
           letter_values2(4) = letter_values2(4)+1;
       end
-      if (str2(i) == 'e') 
+      if (str4(i) == 'e') 
           letter_values2(5) = letter_values2(5)+1;
       end    
-      if (str2(i) == 'f') 
+      if (str4(i) == 'f') 
           letter_values2(6) = letter_values2(6)+1;
       end
-      if (str2(i) == 'g') 
+      if (str4(i) == 'g') 
           letter_values2(7) = letter_values2(7)+1;
       end    
-      if (str2(i) == 'h') 
+      if (str4(i) == 'h') 
           letter_values2(8) = letter_values2(8)+1;
       end
-      if (str2(i) == 'i') 
+      if (str4(i) == 'i') 
           letter_values2(9) = letter_values2(9)+1;
       end    
-      if (str2(i) == 'j') 
+      if (str4(i) == 'j') 
           letter_values2(10) = letter_values2(10)+1;
       end
-      if (str2(i) == 'k') 
+      if (str4(i) == 'k') 
           letter_values2(11) = letter_values2(11)+1;
       end    
-      if (str2(i) == 'l') 
+      if (str4(i) == 'l') 
           letter_values2(12) = letter_values2(12)+1;
       end
-      if (str2(i) == 'm') 
+      if (str4(i) == 'm') 
           letter_values2(13) = letter_values2(13)+1;
       end
-      if (str2(i) == 'n') 
+      if (str4(i) == 'n') 
           letter_values2(14) = letter_values2(14)+1;
       end    
-      if (str2(i) == 'o') 
+      if (str4(i) == 'o') 
           letter_values2(15) = letter_values2(15)+1;
       end
-      if (str2(i) == 'p') 
+      if (str4(i) == 'p') 
           letter_values2(16) = letter_values2(16)+1;
       end    
-      if (str2(i) == 'q') 
+      if (str4(i) == 'q') 
           letter_values2(17) = letter_values2(17)+1;
       end
-      if (str2(i) == 'r') 
+      if (str4(i) == 'r') 
           letter_values2(18) = letter_values2(18)+1;
       end    
-      if (str2(i) == 's') 
+      if (str4(i) == 's') 
           letter_values2(19) = letter_values2(19)+1;
       end
-      if (str2(i) == 't') 
+      if (str4(i) == 't') 
           letter_values2(20) = letter_values2(20)+1;
       end    
-      if (str2(i) == 'u') 
+      if (str4(i) == 'u') 
           letter_values2(21) = letter_values2(21)+1;
       end
-      if (str2(i) == 'v') 
+      if (str4(i) == 'v') 
           letter_values2(22) = letter_values2(22)+1;
       end    
-      if (str2(i) == 'w') 
+      if (str4(i) == 'w') 
           letter_values2(23) = letter_values2(23)+1;
       end
-      if (str2(i) == 'x') 
+      if (str4(i) == 'x') 
           letter_values2(24) = letter_values2(24)+1;
       end    
-      if (str2(i) == 'y') 
+      if (str4(i) == 'y') 
           letter_values2(25) = letter_values2(25)+1;
       end
-      if (str2(i) == 'z') 
+      if (str4(i) == 'z') 
           letter_values2(26) = letter_values2(26)+1;
       end
 end
-length(str2);
 
 
-h1 = figure
+h1 = figure;
 subplot(2,2,1)
 x = 1:26;
 bar(x, letter_values/length(str2), 0.75, 'r');
 set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'});
 xlabel('Letters')
 ylabel('Frequency')
-title('Frequency of letters')
+title('Frequency of letters 1800s')
 
 subplot(2,2,2)
 x = 1:26;
-bar(x, letter_values2/length(str2), 0.75, 'r');
+bar(x, letter_values2/length(str4), 0.75, 'r');
 set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'});
 xlabel('Letters')
 ylabel('Frequency')
-title('Frequency of letters')
+title('Frequency of letters 1900s')
 
 
