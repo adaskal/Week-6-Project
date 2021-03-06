@@ -6,7 +6,7 @@ str = lower(str);
 str2 = str(37:6465);
 letter_values = zeros(1,26);
 for i = 1:length(str2)
-      if (str2(i) == 'a') 
+    if (str2(i) == 'a') 
           letter_values(1) = letter_values(1)+1;
       end    
       if (str2(i) == 'b') 
@@ -91,6 +91,7 @@ length(str2);
 
 
 %English 1900s
+
 url = "https://www.poetryfoundation.org/poems/44272/the-road-not-taken";
 code = webread(url);
 str3 = extractHTMLText(code);
@@ -98,7 +99,7 @@ str3 = lower(str3);
 str4 = str3(78:840);
 letter_values2 = zeros(1,26);
 for i = 1:length(str4)
-      if (str4(i) == 'a') 
+    if (str4(i) == 'a') 
           letter_values2(1) = letter_values2(1)+1;
       end    
       if (str4(i) == 'b') 
@@ -177,6 +178,98 @@ for i = 1:length(str4)
           letter_values2(26) = letter_values2(26)+1;
       end
 end
+length(str4);
+
+%English 1600s
+
+url = "https://www.poetryfoundation.org/poems/45085/the-phoenix-and-the-turtle-56d2246f86c06";
+code = webread(url);
+str5 = extractHTMLText(code);
+str5 = lower(str5);
+str6 = str5(58:2201)
+letter_values3 = zeros(1,26);
+for i = 1:length(str6)
+    if (str6(i) == 'a') 
+          letter_values3(1) = letter_values3(1)+1;
+      end    
+      if (str6(i) == 'b') 
+          letter_values3(2) = letter_values3(2)+1;
+      end
+      if (str6(i) == 'c') 
+          letter_values3(3) = letter_values3(3)+1;
+      end    
+      if (str6(i) == 'd') 
+          letter_values3(4) = letter_values3(4)+1;
+      end
+      if (str6(i) == 'e') 
+          letter_values3(5) = letter_values3(5)+1;
+      end    
+      if (str6(i) == 'f') 
+          letter_values3(6) = letter_values3(6)+1;
+      end
+      if (str6(i) == 'g') 
+          letter_values3(7) = letter_values3(7)+1;
+      end    
+      if (str6(i) == 'h') 
+          letter_values3(8) = letter_values3(8)+1;
+      end
+      if (str6(i) == 'i') 
+          letter_values3(9) = letter_values3(9)+1;
+      end    
+      if (str6(i) == 'j') 
+          letter_values3(10) = letter_values3(10)+1;
+      end
+      if (str6(i) == 'k') 
+          letter_values3(11) = letter_values3(11)+1;
+      end    
+      if (str6(i) == 'l') 
+          letter_values3(12) = letter_values3(12)+1;
+      end
+      if (str6(i) == 'm') 
+          letter_values3(13) = letter_values3(13)+1;
+      end
+      if (str6(i) == 'n') 
+          letter_values3(14) = letter_values3(14)+1;
+      end    
+      if (str6(i) == 'o') 
+          letter_values3(15) = letter_values3(15)+1;
+      end
+      if (str6(i) == 'p') 
+          letter_values3(16) = letter_values3(16)+1;
+      end    
+      if (str6(i) == 'q') 
+          letter_values3(17) = letter_values3(17)+1;
+      end
+      if (str6(i) == 'r') 
+          letter_values3(18) = letter_values3(18)+1;
+      end    
+      if (str6(i) == 's') 
+          letter_values3(19) = letter_values3(19)+1;
+      end
+      if (str6(i) == 't') 
+          letter_values3(20) = letter_values3(20)+1;
+      end    
+      if (str6(i) == 'u') 
+          letter_values3(21) = letter_values3(21)+1;
+      end
+      if (str6(i) == 'v') 
+          letter_values3(22) = letter_values3(22)+1;
+      end    
+      if (str6(i) == 'w') 
+          letter_values3(23) = letter_values3(23)+1;
+      end
+      if (str6(i) == 'x') 
+          letter_values3(24) = letter_values3(24)+1;
+      end    
+      if (str6(i) == 'y') 
+          letter_values3(25) = letter_values3(25)+1;
+      end
+      if (str6(i) == 'z') 
+          letter_values3(26) = letter_values3(26)+1;
+      end
+end
+length(str6);
+
 
 
 h1 = figure;
@@ -186,7 +279,7 @@ bar(x, letter_values/length(str2), 0.75, 'r');
 set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'});
 xlabel('Letters')
 ylabel('Frequency')
-title('Frequency of letters 1800s')
+title('Frequency of letters- The Raven (1800s)')
 
 subplot(2,2,2)
 x = 1:26;
@@ -194,6 +287,13 @@ bar(x, letter_values2/length(str4), 0.75, 'r');
 set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'});
 xlabel('Letters')
 ylabel('Frequency')
-title('Frequency of letters 1900s')
+title('Frequency of letters- The Road Not Taken (1900s)')
 
+subplot(2,2,3)
+x = 1:26;
+bar(x, letter_values3/length(str6), 0.75, 'r');
+set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'});
+xlabel('Letters')
+ylabel('Frequency')
+title('Frequency of letters- The Phoenix and the Turtle (1600s)')
 
