@@ -1,117 +1,92 @@
 url = "https://www.mathworks.com/help/textanalytics";
 code = webread(url);
 str = extractHTMLText(code);
-str = lower(str)
-  numA = 0;
-  numB = 0;
-  numC = 0;
-  numD = 0;
-  numE = 0;
-  numF = 0;
-  numG = 0;
-  numH = 0;
-  numI = 0;
-  numJ = 0;
-  numK = 0;
-  numL = 0;
-  numM = 0;
-  numN = 0;
-  numO = 0;
-  numP = 0;
-  numQ = 0;
-  numR = 0;
-  numS = 0;
-  numT = 0;
-  numU = 0;
-  numV = 0;
-  numW = 0;
-  numX = 0;
-  numY = 0;
-  numZ = 0;
-  for i=1:1:length(str)
-      if (str(i) == 'a') 
-          numA = numA+1;
+str = lower(str);
+letter_values = zeros(1,26);
+for i = 1:length(str)
+    if (str(i) == 'a') 
+          letter_values(1) = letter_values(1)+1;
       end    
       if (str(i) == 'b') 
-          numB = numB+1;
+          letter_values(2) = letter_values(2)+1;
       end
       if (str(i) == 'c') 
-          numC = numC+1;
+          letter_values(3) = letter_values(3)+1;
       end    
       if (str(i) == 'd') 
-          numD = numD+1;
+          letter_values(4) = letter_values(4)+1;
       end
       if (str(i) == 'e') 
-          numE = numE+1;
+          letter_values(5) = letter_values(5)+1;
       end    
       if (str(i) == 'f') 
-          numF = numF+1;
+          letter_values(6) = letter_values(6)+1;
       end
       if (str(i) == 'g') 
-          numG = numG+1;
+          letter_values(7) = letter_values(7)+1;
       end    
       if (str(i) == 'h') 
-          numH = numH+1;
+          letter_values(8) = letter_values(8)+1;
       end
       if (str(i) == 'i') 
-          numI = numI+1;
+          letter_values(9) = letter_values(9)+1;
       end    
       if (str(i) == 'j') 
-          numJ = numJ+1;
+          letter_values(10) = letter_values(10)+1;
       end
       if (str(i) == 'k') 
-          numK = numK+1;
+          letter_values(11) = letter_values(11)+1;
       end    
       if (str(i) == 'l') 
-          numL = numL+1;
+          letter_values(12) = letter_values(12)+1;
       end
       if (str(i) == 'm') 
-          numM = numM+1;
+          letter_values(13) = letter_values(13)+1;
       end
       if (str(i) == 'n') 
-          numN = numN+1;
+          letter_values(14) = letter_values(14)+1;
       end    
       if (str(i) == 'o') 
-          numO = numO+1;
+          letter_values(15) = letter_values(15)+1;
       end
       if (str(i) == 'p') 
-          numP = numP+1;
+          letter_values(16) = letter_values(16)+1;
       end    
       if (str(i) == 'q') 
-          numQ = numQ+1;
+          letter_values(17) = letter_values(17)+1;
       end
       if (str(i) == 'r') 
-          numR = numR+1;
+          letter_values(18) = letter_values(18)+1;
       end    
       if (str(i) == 's') 
-          numS = numS+1;
+          letter_values(19) = letter_values(19)+1;
       end
       if (str(i) == 't') 
-          numT = numT+1;
+          letter_values(20) = letter_values(20)+1;
       end    
       if (str(i) == 'u') 
-          numU = numU+1;
+          letter_values(21) = letter_values(21)+1;
       end
       if (str(i) == 'v') 
-          numV = numV+1;
+          letter_values(22) = letter_values(22)+1;
       end    
       if (str(i) == 'w') 
-          numW = numW+1;
+          letter_values(23) = letter_values(23)+1;
       end
       if (str(i) == 'x') 
-          numX = numX+1;
+          letter_values(24) = letter_values(24)+1;
       end    
       if (str(i) == 'y') 
-          numY = numY+1;
+          letter_values(25) = letter_values(25)+1;
       end
       if (str(i) == 'z') 
-          numZ = numZ+1;
+          letter_values(26) = letter_values(26)+1;
       end
-  end
-  x = 1:26;
-  y1 = [numA numB numC numD numE numF numG numH numI numJ numK numL numM numN numO numP numQ numR numS numT numU numV numW numX numY numZ];
-  bar(x, y1, 0.75, 'r')
-   set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'})
-   xlabel('Letters')
-   ylabel('Frequency')
-   title('Frequency of letters')
+end
+x = 1:26;
+y1 = [numA numB numC numD numE numF numG numH numI numJ numK numL numM numN numO numP numQ numR numS numT numU numV numW numX numY numZ];
+bar(x, y1, 0.75, 'r')
+set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'})
+xlabel('Letters')
+ylabel('Frequency')
+title('Frequency of letters')
