@@ -47,7 +47,7 @@ str = lower(str)
       if (str(i) == 'f') 
           numF = numF+1;
       end
-      if (str(i) == 'G') 
+      if (str(i) == 'g') 
           numG = numG+1;
       end    
       if (str(i) == 'h') 
@@ -66,7 +66,7 @@ str = lower(str)
           numL = numL+1;
       end
       if (str(i) == 'm') 
-          numL = numL+1;
+          numM = numM+1;
       end
       if (str(i) == 'n') 
           numN = numN+1;
