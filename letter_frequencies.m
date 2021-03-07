@@ -1,10 +1,19 @@
-function [letter_values, str_length] = most_common_letter(url)
-%UNTITLED11 Summary of this function goes here
-%   Detailed explanation goes here
+function [letter_values, str_length] = letter_frequencies(url)
+%LETTER FREQUENCIES takes in an input url and outputs a vector containing 
+%the frequency of each letter
 code = webread(url);
 str = extractHTMLText(code);
 str2 = lower(str);
-str3 = eraseBetween(str2, strfind(str2, "share on facebook"), length(str2));
+if contains(str2, "share on facebook")
+    str3 = eraseBetween(str2, strfind(str2, "share on facebook"), length(str2));
+    if contains(str3, "source: poems on various subjects")
+        str3 = eraseBetween(str3, strfind(str3, "source: poems on various subjects"), length(str3));
+    end
+    if contains(str3, "n/a")
+        str3 = eraseBetween(str3, strfind(str3, "n/a"), length(str3));
+    end
+end
+
 str_length = length(str3);
 letter_values = zeros(1,26);
 for i = 1:length(str3)
