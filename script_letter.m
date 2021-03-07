@@ -1,7 +1,7 @@
-[letters1, length1] = most_common_letter("https://www.poetryfoundation.org/poems/45085/the-phoenix-and-the-turtle-56d2246f86c06");
-[letters2, length2] = most_common_letter("https://www.poetryfoundation.org/poems/52632/on-imagination");
-[letters3, length3] = most_common_letter("https://www.poetryfoundation.org/poems/48860/the-raven");
-[letters4, length4] = most_common_letter("https://www.poetryfoundation.org/poems/44272/the-road-not-taken");
+[letters1, length1] = letter_frequencies("https://www.poetryfoundation.org/poems/45085/the-phoenix-and-the-turtle-56d2246f86c06");
+[letters2, length2] = letter_frequencies("https://www.poetryfoundation.org/poems/52632/on-imagination");
+[letters3, length3] = letter_frequencies("https://www.poetryfoundation.org/poems/48860/the-raven");
+[letters4, length4] = letter_frequencies("https://www.poetryfoundation.org/poems/44272/the-road-not-taken");
 
 h1 = figure;
 
