@@ -4,19 +4,12 @@ code = webread(url);
 str_com = extractHTMLText(code);
 str_com1 = lower(str_com);
 str_com2 = str_com1(37:6465);
-str_poe1 = strings(5485,1);
-for i = 1 : 5485 - 1
+str_poe1 = strings(6429,1);
+for i = 1 : 6428
     str_poe1(i) = [str_com2(i),str_com2(i + 1)];
 end
-com1 = str_poe1;
-str_poe2 = strings(945,1);
-for k = 5485:6429 - 1
-    str_poe2(k - 5484) = [str_com2(k),str_com2(k + 1)];  
-end
-com2 = str_poe2;
-my_str_of_1 = regexprep(com1,'[^A-Za-z]+',' ');
+a = transpose(str_poe1)
+my_str_of_1 = regexprep(a,'[^A-Za-z]+',' ');
 my_str1 = regexprep(my_str_of_1,'[^A-Za-z]+','');
-my_str_of_2 = regexprep(com2,'[^A-Za-z]+',' ');
-my_str2 = regexprep(my_str_of_2,'[^A-Za-z]+','');
 
 
