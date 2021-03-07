@@ -14,3 +14,9 @@ for k = 5485:6429 - 1
     str_poe2(k - 5484) = [str_com2(k),str_com2(k + 1)];  
 end
 com2 = str_poe2;
+my_str_of_1 = regexprep(com1,'[^A-Za-z]+',' ');
+my_str1 = regexprep(my_str_of_1,'[^A-Za-z]+','');
+my_str_of_2 = regexprep(com2,'[^A-Za-z]+',' ');
+my_str2 = regexprep(my_str_of_2,'[^A-Za-z]+','');
+
+
