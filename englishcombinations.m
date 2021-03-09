@@ -39,3 +39,44 @@ my_str1(my_str1 == "x") = [];
 my_str1(my_str1 == "y") = [];
 my_str1(my_str1 == "z") = [];
 
+%English 1900s
+url = "https://www.poetryfoundation.org/poems/44272/the-road-not-taken";;
+code = webread(url);
+str_road1 = extractHTMLText(code);
+str_road2 = lower(str_road1);
+str_road3 = str_road2(78:840);
+str_road = strings(length(str_com3),1);
+for j = 1 : length(str_road3) - 1
+    str_road(j) = [str_road3(j),str_road3(j + 1)];
+end
+b = transpose(str_road);
+my_str_of_road = regexprep(b,'[^A-Za-z]+',' ');
+my_road = regexprep(my_str_of_road,'[^A-Za-z]+','');
+my_road(my_road == "") = [];
+my_road(my_road == "a") = [];
+my_road(my_road == "b") = [];
+my_road(my_road == "c") = [];
+my_road(my_road == "d") = [];
+my_road(my_road == "e") = [];
+my_road(my_road == "f") = [];
+my_road(my_road == "g") = [];
+my_road(my_road == "h") = [];
+my_road(my_road == "i") = [];
+my_road(my_road == "j") = [];
+my_road(my_road == "k") = [];
+my_road(my_road == "l") = [];
+my_road(my_road == "m") = [];
+my_road(my_road == "n") = [];
+my_road(my_road == "o") = [];
+my_road(my_road == "p") = [];
+my_road(my_road == "q") = [];
+my_road(my_road == "r") = [];
+my_road(my_road == "s") = [];
+my_road(my_road == "t") = [];
+my_road(my_road == "u") = [];
+my_road(my_road == "v") = [];
+my_road(my_road == "w") = [];
+my_road(my_road == "x") = [];
+my_road(my_road == "y") = [];
+my_road(my_road == "z") = [];
+
