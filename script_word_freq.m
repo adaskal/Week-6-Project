@@ -48,4 +48,37 @@ str4 = convertCharsToStrings(str4);
 
 h1 = figure;
 subplot(2,2,1)
+x = 1:10;
+y = freq1;
+bar(x, y, 0.75, 'r');
+set(gca,'xtick',[1:10],'xticklabel',words1);
+xlabel('Words')
+ylabel('Frequency')
+title('Frequencies of top 10 words- The Phoenix and the Turtle (1600s)')
 
+subplot(2,2,2)
+x = 1:10;
+y = freq2;
+bar(x, y, 0.75, 'r');
+set(gca,'xtick',[1:10],'xticklabel',words2);
+xlabel('Words')
+ylabel('Frequency')
+title('Frequencies of top 10 words- On Imagination  (1700s)')
+
+subplot(2,2,3)
+x = 1:10;
+y = freq3;
+bar(x, y, 0.75, 'r');
+set(gca,'xtick',[1:10],'xticklabel',words3);
+xlabel('Words')
+ylabel('Frequency')
+title('Frequencies of top 10 words- The Raven (1800s)')
+
+subplot(2,2,4)
+x = 1:10;
+y = freq4;
+bar(x, y, 0.75, 'r');
+set(gca,'xtick',[1:10],'xticklabel',words4);
+xlabel('Words')
+ylabel('Frequency')
+title('Frequencies of top 10 words- The Road Not Taken (1900s)')
