@@ -211,8 +211,8 @@ my_imagination(my_imagination == "z") = [];
 eee = hist(nnn,length(lll));
 max_of_imagination = maxk(eee,5);
 where_max_imagination = zeros(1,5);
-for yy = 1:length(max_of_road)
-    where_max_imagination(yy) = find(e == max_of_road(yy)); 
+for yy = 1:length(max_of_imagination)
+    where_max_imagination(yy) = find(eee == max_of_imagination(yy)); 
 end
 where_com_imagination = lll(where_max_imagination);
 subplot(2,2,2)
