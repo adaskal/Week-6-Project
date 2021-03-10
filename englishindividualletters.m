@@ -1,13 +1,13 @@
 %English 1800s
 url = "https://www.poetryfoundation.org/poems/48860/the-raven";
 code = webread(url);
-str = extractHTMLText(code);
+str = extractHTMLText(code); %original string is text from imported document
 str = lower(str);
-str2 = str(37:6465);
+str2 = str(37:6465); %new string = old string without extraneous words
 letter_values = zeros(1,26);
-for i = 1:length(str2)
+for i = 1:length(str2) %iterate through first position through end of string
     if (str2(i) == 'a') 
-          letter_values(1) = letter_values(1)+1;
+          letter_values(1) = letter_values(1)+1; %if position i in str2 is "a", letter values = letter values + 1
       end    
       if (str2(i) == 'b') 
           letter_values(2) = letter_values(2)+1;
@@ -85,20 +85,17 @@ for i = 1:length(str2)
           letter_values(26) = letter_values(26)+1;
       end
 end
-length(str2);
-
-
-
+length(str);
 
 %English 1900s
 
 url = "https://www.poetryfoundation.org/poems/44272/the-road-not-taken";
 code = webread(url);
-str3 = extractHTMLText(code);
+str3 = extractHTMLText(code);  %original string is text from imported document
 str3 = lower(str3);
-str4 = str3(78:840);
+str4 = str3(78:840); %new string = old string without extraneous words
 letter_values2 = zeros(1,26);
-for i = 1:length(str4)
+for i = 1:length(str4) %iterate from first position through end of string
     if (str4(i) == 'a') 
           letter_values2(1) = letter_values2(1)+1;
       end    
@@ -358,42 +355,40 @@ for i = 1:length(str8)
           letter_values4(26) = letter_values4(26)+1;
       end
 end
-length(str8);
-
-
+length(str7);
 
 
 h1 = figure;
-subplot(2,2,3)
-x = 1:26;
-bar(x, letter_values/length(str2), 0.75, 'r');
-set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'});
+subplot(2,2,3) %creates subplot with dimensions 2x2, puts this plot at position 3
+x = 1:26; %positions 1 - 26
+bar(x, letter_values/length(str2), 0.8, 'r'); %create bar graph with standard x values, y increments equal to letter values/length of str2
+set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'});  %set each tick in x axis to equal letters A - Z
 xlabel('Letters')
-ylabel('Frequency')
+ylabel('Percentage of total words')
 title('Frequency of letters- The Raven (1800s)')
 
-subplot(2,2,4)
-x = 1:26;
-bar(x, letter_values2/length(str4), 0.75, 'r');
+subplot(2,2,4) %creates subplot with dimensions 2x2, puts this plot at position 4
+x = 1:26; %positions 1 - 26
+bar(x, letter_values2/length(str4), 0.8, 'r');
 set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'});
 xlabel('Letters')
-ylabel('Frequency')
+ylabel('Percentage of total words')
 title('Frequency of letters- The Road Not Taken (1900s)')
 
-subplot(2,2,1)
-x = 1:26;
-bar(x, letter_values3/length(str6), 0.75, 'r');
+subplot(2,2,1) %creates subplot with dimensions 2x2, puts this plot at position 1
+x = 1:26; %positions 1 - 26
+bar(x, letter_values3/length(str6), 0.8, 'r');
 set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'});
 xlabel('Letters')
-ylabel('Frequency')
+ylabel('Percentage of total words')
 title('Frequency of letters- The Phoenix and the Turtle (1600s)')
 
-subplot(2,2,2)
-x = 1:26;
-bar(x, letter_values4/length(str8), 0.75, 'r');
+subplot(2,2,2) %creates subplot with dimensions 2x2, puts this plot at position 2
+x = 1:26; %positions 1 - 26
+bar(x, letter_values4/length(str8), 0.8, 'r');
 set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'});
 xlabel('Letters')
-ylabel('Frequency')
+ylabel('Percentage of total words')
 title('Frequency of letters- On Imagination  (1700s)')
 
 
