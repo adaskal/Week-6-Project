@@ -54,6 +54,7 @@ set(gca,'xtick',[1:5],'xticklabel',where_com_poe);
 xlabel('Combinations')
 ylabel('Frequency')
 title('Frequency of combinations- The Raven (1800s)')
+
 %English 1900s
 url = "https://www.poetryfoundation.org/poems/44272/the-road-not-taken";
 code = webread(url);
@@ -109,3 +110,116 @@ set(gca,'xtick',[1:5],'xticklabel',where_com_road);
 xlabel('Combinations')
 ylabel('Frequency')
 title('Frequency of combinations- The Road Not Taken (1900s)')
+
+%English 1600s
+url = "https://www.poetryfoundation.org/poems/45085/the-phoenix-and-the-turtle-56d2246f86c06";
+code = webread(url);
+str_phoenix1 = extractHTMLText(code);
+str_phoenix2 = lower(str_phoenix1);
+str_phoenix3 = str_phoenix2(58:2201);
+str_phoenix = strings(length(str_phoenix3),1);
+for p = 1 : length(str_phoenix3) - 1
+    str_phoenix(p) = [str_phoenix3(p),str_phoenix3(p + 1)];
+end
+c = transpose(str_phoenix);
+my_str_of_phoenix = regexprep(c,'[^A-Za-z]+',' ');
+my_phoenix = regexprep(my_str_of_phoenix,'[^A-Za-z]+','');
+my_phoenix(my_phoenix == "") = [];
+my_phoenix(my_phoenix == "a") = [];
+my_phoenix(my_phoenix == "b") = [];
+my_phoenix(my_phoenix == "c") = [];
+my_phoenix(my_phoenix == "d") = [];
+my_phoenix(my_phoenix == "e") = [];
+my_phoenix(my_phoenix == "f") = [];
+my_phoenix(my_phoenix == "g") = [];
+my_phoenix(my_phoenix == "h") = [];
+my_phoenix(my_phoenix == "i") = [];
+my_phoenix(my_phoenix == "j") = [];
+my_phoenix(my_phoenix == "k") = [];
+my_phoenix(my_phoenix == "l") = [];
+my_phoenix(my_phoenix == "m") = [];
+my_phoenix(my_phoenix == "n") = [];
+my_phoenix(my_phoenix == "o") = [];
+my_phoenix(my_phoenix == "p") = [];
+my_phoenix(my_phoenix == "q") = [];
+my_phoenix(my_phoenix == "r") = [];
+my_phoenix(my_phoenix == "s") = [];
+my_phoenix(my_phoenix == "t") = [];
+my_phoenix(my_phoenix == "u") = [];
+my_phoenix(my_phoenix == "v") = [];
+my_phoenix(my_phoenix == "w") = [];
+my_phoenix(my_phoenix == "x") = [];
+my_phoenix(my_phoenix == "y") = [];
+my_phoenix(my_phoenix == "z") = [];
+[ll,mm,nn] = unique(my_phoenix);
+ee = hist(nn,length(ll));
+max_of_phoenix = maxk(ee,5);
+where_max_phoenix = zeros(1,5);
+% for pp = 1:length(max_of_phoenix)
+%     where_max_phoenix(pp) = find(ee == max_of_phoenix(pp)); 
+% end
+% where_com_phoenix = ll(where_max_phoenix);
+% subplot(2,2,3)
+% x = 1:5;
+% bar(x, max_of_phoenix./length(my_phoenix), 0.75, 'r');
+% set(gca,'xtick',[1:5],'xticklabel',where_com_phoenix);
+% xlabel('Combinations')
+% ylabel('Frequency')
+% title('Frequency of combinations- The Phoenix and the Turtle (1600s)')
+
+
+%English 1700s
+url = "https://www.poetryfoundation.org/poems/52632/on-imagination";
+code = webread(url);
+str_imagination1 = extractHTMLText(code);
+str_imagination2 = lower(str_imagination1);
+str_imagination3 = str_imagination2(43:2421);
+str_imagination = strings(length(str_imagination3),1);
+for im = 1 : length(str_imagination3) - 1
+    str_imagination(im) = [str_imagination3(im),str_imagination3(im + 1)];
+end
+d = transpose(str_imagination);
+my_str_of_imagination = regexprep(d,'[^A-Za-z]+',' ');
+my_imagination = regexprep(my_str_of_imagination,'[^A-Za-z]+','');
+my_imagination(my_imagination == "") = [];
+my_imagination(my_imagination == "a") = [];
+my_imagination(my_imagination == "b") = [];
+my_imagination(my_imagination == "c") = [];
+my_imagination(my_imagination == "d") = [];
+my_imagination(my_imagination == "e") = [];
+my_imagination(my_imagination == "f") = [];
+my_imagination(my_imagination == "g") = [];
+my_imagination(my_imagination == "h") = [];
+my_imagination(my_imagination == "i") = [];
+my_imagination(my_imagination == "j") = [];
+my_imagination(my_imagination == "k") = [];
+my_imagination(my_imagination == "l") = [];
+my_imagination(my_imagination == "m") = [];
+my_imagination(my_imagination == "n") = [];
+my_imagination(my_imagination == "o") = [];
+my_imagination(my_imagination == "p") = [];
+my_imagination(my_imagination == "q") = [];
+my_imagination(my_imagination == "r") = [];
+my_imagination(my_imagination == "s") = [];
+my_imagination(my_imagination == "t") = [];
+my_imagination(my_imagination == "u") = [];
+my_imagination(my_imagination == "v") = [];
+my_imagination(my_imagination == "w") = [];
+my_imagination(my_imagination == "x") = [];
+my_imagination(my_imagination == "y") = [];
+my_imagination(my_imagination == "z") = [];
+[lll,mmm,nnn] = unique(my_imagination);
+eee = hist(nnn,length(lll));
+max_of_imagination = maxk(eee,5);
+where_max_imagination = zeros(1,5);
+for yy = 1:length(max_of_road)
+    where_max_imagination(yy) = find(e == max_of_road(yy)); 
+end
+where_com_imagination = lll(where_max_imagination);
+subplot(2,2,3)
+x = 1:5;
+bar(x, max_of_imagination./length(my_imagination), 0.75, 'r');
+set(gca,'xtick',[1:5],'xticklabel',where_com_imagination);
+xlabel('Combinations')
+ylabel('Frequency')
+title('Frequency of combinations- On Imagination  (1700s)')
