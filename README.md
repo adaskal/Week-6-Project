@@ -7,4 +7,4 @@ To determine the frequency of the top 5 most common two letter combinations over
 To determine the frequency of the top 10 most common words over the years use script_word_freq.m for english poems and for french use script_french_words.m. These call the function word_freq.m so have that one opened. 
 There is another way to determine the frequency of the letters using the letter_frequencies.m function and the script_letter.m script. This gives the letter frequencies for the english poems. 
 The other way to determine the frequency of the letters in french poems is by using french_letter_frequencies.m function and script_french_letter.m script.  
-The time we spend on the project and more information about it as well is in the project proposal.
+The time we spent on the project and more information about the project as well is in the project proposal. We did not use the commit comments very well while doing the project so they do not always include the amount of time we spent doing that part of code. We added the amount of time each part took us to complete in the project proposal. 
