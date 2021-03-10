@@ -20,7 +20,7 @@ v = values(unique_words);       % cell array of frequency of each word
 v = cell2mat(v);                % converts from cell array to matrix
 
 [sorted_vals, sort_idx] = sort(v);  % sorts frequencies in increasing order
-sorted_keys = k(sort_idx)           % sorts words in order of their frequency
+sorted_keys = k(sort_idx);           % sorts words in order of their frequency
 
 % assign words and freq to the 10 most common words and their corresponding
 % frequencies
