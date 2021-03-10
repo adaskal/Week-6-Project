@@ -38,14 +38,17 @@ my_str1(my_str1 == "w") = [];
 my_str1(my_str1 == "x") = [];
 my_str1(my_str1 == "y") = [];
 my_str1(my_str1 == "z") = [];
+[rt,ty,zs] = unique(my_str1);
+uy = hist(zs,length(rt));
+max_of_poe = maxk(uy,5);
 
 %English 1900s
-url = "https://www.poetryfoundation.org/poems/44272/the-road-not-taken";;
+url = "https://www.poetryfoundation.org/poems/44272/the-road-not-taken";
 code = webread(url);
 str_road1 = extractHTMLText(code);
 str_road2 = lower(str_road1);
 str_road3 = str_road2(78:840);
-str_road = strings(length(str_com3),1);
+str_road = strings(length(str_road3),1);
 for j = 1 : length(str_road3) - 1
     str_road(j) = [str_road3(j),str_road3(j + 1)];
 end
@@ -79,4 +82,6 @@ my_road(my_road == "w") = [];
 my_road(my_road == "x") = [];
 my_road(my_road == "y") = [];
 my_road(my_road == "z") = [];
-
+[l,m,n] = unique(my_road);
+e = hist(n,length(l));
+max_of_road = maxk(e,5);
