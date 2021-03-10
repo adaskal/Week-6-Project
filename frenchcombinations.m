@@ -1,73 +1,73 @@
-% %French 1800s
-% url = "https://en.wikipedia.org/wiki/Les_Djinns_(poem)";
-% code = webread(url);
-% str_les1 = extractHTMLText(code);
-% str_les2 = lower(str_les1);
-% str_les3 = str_les2(1:2895);
-% str_les = strings(length(str_les3),1);
-% for o = 1 : length(str_les3) - 1
-%     str_les(o) = [str_les3(o),str_les3(o + 1)];
-% end
-% f = transpose(str_les);
-% my_str_of_les = regexprep(f,'[^A-Za-z]+',' ');
-% my_les = regexprep(my_str_of_les,'[^A-Za-z]+','');
-% my_les(my_les == "") = [];
-% my_les(my_les == "a") = [];
-% my_les(my_les == "â") = [];
-% my_les(my_les == "à") = [];
-% my_les(my_les == "b") = [];
-% my_les(my_les == "ç") = [];
-% my_les(my_les == "c") = [];
-% my_les(my_les == "d") = [];
-% my_les(my_les == "e") = [];
-% my_les(my_les == "ê") = [];
-% my_les(my_les == "é") = [];
-% my_les(my_les == "è") = [];
-% my_les(my_les == "ë") = [];
-% my_les(my_les == "f") = [];
-% my_les(my_les == "g") = [];
-% my_les(my_les == "h") = [];
-% my_les(my_les == "i") = [];
-% my_les(my_les == "ï") = [];
-% my_les(my_les == "î") = [];
-% my_les(my_les == "j") = [];
-% my_les(my_les == "k") = [];
-% my_les(my_les == "l") = [];
-% my_les(my_les == "m") = [];
-% my_les(my_les == "n") = [];
-% my_les(my_les == "o") = [];
-% my_les(my_les == "ô") = [];
-% my_les(my_les == "œ") = [];
-% my_les(my_les == "p") = [];
-% my_les(my_les == "q") = [];
-% my_les(my_les == "r") = [];
-% my_les(my_les == "s") = [];
-% my_les(my_les == "t") = [];
-% my_les(my_les == "u") = [];
-% my_les(my_les == "ü") = [];
-% my_les(my_les == "û") = [];
-% my_les(my_les == "ù") = [];
-% my_les(my_les == "v") = [];
-% my_les(my_les == "w") = [];
-% my_les(my_les == "x") = [];
-% my_les(my_les == "y") = [];
-% my_les(my_les == "z") = [];
-% [w,z,s] = unique(my_les);
-% u = hist(s,length(w));
-% max_of_les = maxk(u,2);
-% where_max_les = zeros(1,2);
-% for oo = 1:length(max_of_les)
-%     where_max_les(oo) = find(u == max_of_les(oo)); 
-% end
-% where_com_les = w(where_max_les);
-% h4 = figure;
-% subplot(2,2,3)
-% x = 1:2;
-% bar(x, max_of_les./length(my_les), 0.75, 'r');
-% set(gca,'xtick',[1:2],'xticklabel',where_com_les);
-% xlabel('Combinations')
-% ylabel('Frequency')
-% title('Frequency of combinations- Les_Djinns (1800s)')
+%French 1800s
+url = "https://en.wikipedia.org/wiki/Les_Djinns_(poem)";
+code = webread(url);
+str_les1 = extractHTMLText(code);
+str_les2 = lower(str_les1);
+str_les3 = str_les2(1:2895);
+str_les = strings(length(str_les3),1);
+for o = 1 : length(str_les3) - 1
+    str_les(o) = [str_les3(o),str_les3(o + 1)];
+end
+f = transpose(str_les);
+my_str_of_les = regexprep(f,'[^A-Za-z]+',' ');
+my_les = regexprep(my_str_of_les,'[^A-Za-z]+','');
+my_les(my_les == "") = [];
+my_les(my_les == "a") = [];
+my_les(my_les == "â") = [];
+my_les(my_les == "à") = [];
+my_les(my_les == "b") = [];
+my_les(my_les == "ç") = [];
+my_les(my_les == "c") = [];
+my_les(my_les == "d") = [];
+my_les(my_les == "e") = [];
+my_les(my_les == "ê") = [];
+my_les(my_les == "é") = [];
+my_les(my_les == "è") = [];
+my_les(my_les == "ë") = [];
+my_les(my_les == "f") = [];
+my_les(my_les == "g") = [];
+my_les(my_les == "h") = [];
+my_les(my_les == "i") = [];
+my_les(my_les == "ï") = [];
+my_les(my_les == "î") = [];
+my_les(my_les == "j") = [];
+my_les(my_les == "k") = [];
+my_les(my_les == "l") = [];
+my_les(my_les == "m") = [];
+my_les(my_les == "n") = [];
+my_les(my_les == "o") = [];
+my_les(my_les == "ô") = [];
+my_les(my_les == "œ") = [];
+my_les(my_les == "p") = [];
+my_les(my_les == "q") = [];
+my_les(my_les == "r") = [];
+my_les(my_les == "s") = [];
+my_les(my_les == "t") = [];
+my_les(my_les == "u") = [];
+my_les(my_les == "ü") = [];
+my_les(my_les == "û") = [];
+my_les(my_les == "ù") = [];
+my_les(my_les == "v") = [];
+my_les(my_les == "w") = [];
+my_les(my_les == "x") = [];
+my_les(my_les == "y") = [];
+my_les(my_les == "z") = [];
+[w,z,s] = unique(my_les);
+u = hist(s,length(w));
+max_of_les = maxk(u,5);
+test11 = find(u == 62);
+test22 = find(u == 51);
+test33 = find(u == 34);
+test44 = find(u == 33);
+where_com_les = [w(test11), w(test22), w(127), w(182), w(test44)];
+h4 = figure;
+subplot(2,2,3)
+x = 1:5;
+bar(x, max_of_les./length(my_les), 0.75, 'r');
+set(gca,'xtick',[1:5],'xticklabel',where_com_les);
+xlabel('Combinations')
+ylabel('Frequency')
+title('Frequency of combinations- Les_Djinns (1800s)')
  
 %French 1900s
 url = "https://fleursdumal.org/poem/200";
