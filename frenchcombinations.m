@@ -22,7 +22,7 @@ my_les(my_les == "d") = [];
 my_les(my_les == "e") = [];
 my_les(my_les == "ê") = [];
 my_les(my_les == "é") = [];
-my_les(my_les == "è¨") = [];
+my_les(my_les == "è") = [];
 my_les(my_les == "ë") = [];
 my_les(my_les == "f") = [];
 my_les(my_les == "g") = [];
@@ -69,76 +69,76 @@ xlabel('Combinations')
 ylabel('Frequency')
 title('Frequency of combinations- Les_Djinns (1800s)')
  
-% %French 1900s
-% url = "https://fleursdumal.org/poem/200";
-% code = webread(url);
-% str_albatros1 = extractHTMLText(code);
-% str_albatros2 = lower(str_albatros1);
-% str_albatros3 = str_albatros2(74:809);
-% str_albatros = strings(length(str_albatros3),1);
-% for j = 1 : length(str_albatros3) - 1
-%     str_albatros(i) = [str_albatros3(i),str_albatros3(i + 1)];
-% end
-% g = transpose(str_albatros);
-% my_str_of_albatros = regexprep(g,'[^A-Za-z]+',' ');
-% my_albatros = regexprep(my_str_of_albatros,'[^A-Za-z]+','');
-% my_albatros(my_albatros == "") = [];
-% my_albatros(my_albatros == "a") = [];
-% my_albatros(my_albatros == "Ã¢") = [];
-% my_albatros(my_albatros == "Ã ") = [];
-% my_albatros(my_albatros == "b") = [];
-% my_albatros(my_albatros == "c") = [];
-% my_albatros(my_albatros == "Ã§") = [];
-% my_albatros(my_albatros == "d") = [];
-% my_albatros(my_albatros == "e") = [];
-% my_albatros(my_albatros == "Ãª") = [];
-% my_albatros(my_albatros == "Ã©") = [];
-% my_albatros(my_albatros == "Ã¨") = [];
-% my_albatros(my_albatros == "Ã«") = [];
-% my_albatros(my_albatros == "f") = [];
-% my_albatros(my_albatros == "g") = [];
-% my_albatros(my_albatros == "h") = [];
-% my_albatros(my_albatros == "i") = [];
-% my_albatros(my_albatros == "Ã¯") = [];
-% my_albatros(my_albatros == "Ã®") = [];
-% my_albatros(my_albatros == "j") = [];
-% my_albatros(my_albatros == "k") = [];
-% my_albatros(my_albatros == "l") = [];
-% my_albatros(my_albatros == "m") = [];
-% my_albatros(my_albatros == "n") = [];
-% my_albatros(my_albatros == "o") = [];
-% my_albatros(my_albatros == "Ã´") = [];
-% my_albatros(my_albatros == "Å“") = [];
-% my_albatros(my_albatros == "p") = [];
-% my_albatros(my_albatros == "q") = [];
-% my_albatros(my_albatros == "r") = [];
-% my_albatros(my_albatros == "s") = [];
-% my_albatros(my_albatros == "t") = [];
-% my_albatros(my_albatros == "u") = [];
-% my_albatros(my_albatros == "Ã¼") = [];
-% my_albatros(my_albatros == "Ã»") = [];
-% my_albatros(my_albatros == "Ã¹") = [];
-% my_albatros(my_albatros == "v") = [];
-% my_albatros(my_albatros == "w") = [];
-% my_albatros(my_albatros == "x") = [];
-% my_albatros(my_albatros == "y") = [];
-% my_albatros(my_albatros == "z") = [];
-% [ww,zz,ss] = unique(my_albatros);
-% uu = hist(ss,length(ww));
-% max_of_albatros = maxk(uu,5);
-% where_max_albatros = zeros(1,5);
-% for jj = 1:length(max_of_albatros)
-%     where_max_albatros(ii) = find(uu == max_of_albatros(ii)); 
-% end
-% where_com_albatros = ww(where_max_albatros);
-% subplot(2,2,4)
-% x = 1:5;
-% bar(x, max_of_albatros./length(my_albatros), 0.75, 'r');
-% set(gca,'xtick',[1:5],'xticklabel',where_com_albatros);
-% xlabel('Combinations')
-% ylabel('Frequency')
-% title('Frequency of combinations- L''Albatros (1900s)')
-%  
+%French 1900s
+url = "https://fleursdumal.org/poem/200";
+code = webread(url);
+str_albatros1 = extractHTMLText(code);
+str_albatros2 = lower(str_albatros1);
+str_albatros3 = str_albatros2(74:809);
+str_albatros = strings(length(str_albatros3),1);
+for j = 1 : length(str_albatros3) - 1
+    str_albatros(j) = [str_albatros3(j),str_albatros3(j + 1)];
+end
+g = transpose(str_albatros);
+my_str_of_albatros = regexprep(g,'[^A-Za-z]+',' ');
+my_albatros = regexprep(my_str_of_albatros,'[^A-Za-z]+','');
+my_albatros(my_albatros == "") = [];
+my_albatros(my_albatros == "a") = [];
+my_albatros(my_albatros == "â") = [];
+my_albatros(my_albatros == "à") = [];
+my_albatros(my_albatros == "b") = [];
+my_albatros(my_albatros == "ç") = [];
+my_albatros(my_albatros == "c") = [];
+my_albatros(my_albatros == "d") = [];
+my_albatros(my_albatros == "e") = [];
+my_albatros(my_albatros == "ê") = [];
+my_albatros(my_albatros == "é") = [];
+my_albatros(my_albatros == "è") = [];
+my_albatros(my_albatros == "ë") = [];
+my_albatros(my_albatros == "f") = [];
+my_albatros(my_albatros == "g") = [];
+my_albatros(my_albatros == "h") = [];
+my_albatros(my_albatros == "i") = [];
+my_albatros(my_albatros == "ï") = [];
+my_albatros(my_albatros == "î") = [];
+my_albatros(my_albatros == "j") = [];
+my_albatros(my_albatros == "k") = [];
+my_albatros(my_albatros == "l") = [];
+my_albatros(my_albatros == "m") = [];
+my_albatros(my_albatros == "n") = [];
+my_albatros(my_albatros == "o") = [];
+my_albatros(my_albatros == "ô") = [];
+my_albatros(my_albatros == "œ") = [];
+my_albatros(my_albatros == "p") = [];
+my_albatros(my_albatros == "q") = [];
+my_albatros(my_albatros == "r") = [];
+my_albatros(my_albatros == "s") = [];
+my_albatros(my_albatros == "t") = [];
+my_albatros(my_albatros == "u") = [];
+my_albatros(my_albatros == "ü") = [];
+my_albatros(my_albatros == "û") = [];
+my_albatros(my_albatros == "ù") = [];
+my_albatros(my_albatros == "v") = [];
+my_albatros(my_albatros == "w") = [];
+my_albatros(my_albatros == "x") = [];
+my_albatros(my_albatros == "y") = [];
+my_albatros(my_albatros == "z") = [];
+[ww,zz,ss] = unique(my_albatros);
+uu = hist(ss,length(ww));
+max_of_albatros = maxk(uu,5);
+where_max_albatros = zeros(1,5);
+for jj = 1:length(max_of_albatros)
+    where_max_albatros(jj) = find(uu == max_of_albatros(jj)); 
+end
+where_com_albatros = ww(where_max_albatros);
+subplot(2,2,4)
+x = 1:5;
+bar(x, max_of_albatros./length(my_albatros), 0.75, 'r');
+set(gca,'xtick',[1:5],'xticklabel',where_com_albatros);
+xlabel('Combinations')
+ylabel('Frequency')
+title('Frequency of combinations- L''Albatros (1900s)')
+ 
 % %French 1700s
 % url = "https://poesie.webnet.fr/lesgrandsclassiques/poemes/jacques_delille/les_jardins";
 % code = webread(url);
