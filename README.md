@@ -8,4 +8,4 @@ To determine the frequency of the top 10 most common words over the years use sc
 There is another way to determine the frequency of the letters using the letter_frequencies.m function and the script_letter.m script. This gives the letter frequencies for the english poems. 
 The other way to determine the frequency of the letters in french poems is by using french_letter_frequencies.m function and script_french_letter.m script.  
 The time we spent on the project and more information about the project as well is in the project proposal. We did not use the commit comments very well while doing the project so they do not always include the amount of time we spent doing that part of code. We added the amount of time each part took us to complete in the project proposal. 
-The gif for the project was too large to be added into the readme so we added it into a separate file within the repository.
+The gif for the project was too large to be added into the readme so we added it into a separate file within the repository.  The name of the GIF file is Project GIF Final.
