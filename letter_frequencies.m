@@ -1,9 +1,15 @@
 function [letter_values, str_length] = letter_frequencies(str)
-%LETTER FREQUENCIES takes in an input url and outputs a vector containing 
-%the frequency of each letter
+%LETTER FREQUENCIES takes in an input str and outputs the length of the 
+%character vector and a vector containing the frequency of each letter
+%   takes in an input str (character vector), which is the text of the
+%   poem, then loops through the length of the character vector to count
+%   each time the letter appears
 str_length = length(str);
-letter_values = zeros(1,26);
+% initializes a vector of zeros the length of the English alphabet
+letter_values = zeros(1,26);    
 for i = 1:length(str)
+    % every time the letter appears, add 1 to its frequency, which is
+    % recorded in letter_values
       if (str(i) == 'a') 
           letter_values(1) = letter_values(1)+1;
       end    
@@ -84,4 +90,5 @@ for i = 1:length(str)
       end
 end
 end
+
 
