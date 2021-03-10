@@ -3,7 +3,8 @@ url = "https://www.poemhunter.com/poem/la-belle-vieille/";
 code = webread(url);
 str5 = extractHTMLText(code);
 str5 = lower(str5);
-str6 = str5(754:4132);
+str6 = str5(782:4132);
+% erasing punctuation
 str6 = replace(replace(replace(replace(replace(replace(replace(...
     str6,","," "),"."," "),"!"," "),";"," "),":"," "),"-"," "),"?"," ");
 str6 = convertCharsToStrings(str6);
