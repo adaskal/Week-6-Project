@@ -3,7 +3,7 @@ url = "https://www.poetryfoundation.org/poems/45085/the-phoenix-and-the-turtle-5
 code = webread(url);
 str5 = extractHTMLText(code);
 str5 = lower(str5);
-str6 = str5(58:2201)
+str6 = str5(58:2201);
 [letters1, length1] = letter_frequencies(str6);
 
 %English 1700s
