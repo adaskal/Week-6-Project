@@ -4,6 +4,7 @@ code = webread(url);
 str5 = extractHTMLText(code);
 str5 = lower(str5);
 str6 = str5(58:2201);
+% erasing punctuation
 str6 = replace(replace(replace(replace(replace(replace(replace(replace(...
     replace(replace(str6,","," "),"."," "),"—"," "),"!"," "),";"," "),...
     ":"," "),"?"," "),'“'," "),'”'," "),"‘"," ");
