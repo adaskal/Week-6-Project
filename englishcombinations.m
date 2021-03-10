@@ -40,12 +40,20 @@ my_str1(my_str1 == "y") = [];
 my_str1(my_str1 == "z") = [];
 [rt,ty,zs] = unique(my_str1);
 uy = hist(zs,length(rt));
-max_of_poe = maxk(uy,9);
-where_max_poe = zeros(1,9);
+max_of_poe = maxk(uy,5);
+where_max_poe = zeros(1,5);
 for ii = 1:length(max_of_poe)
     where_max_poe(ii) = find(uy == max_of_poe(ii)); 
 end
-disp(where_max_poe)
+where_com_poe = rt(where_max_poe);
+h5 = figure;
+subplot(2,2,1)
+x = 1:5;
+bar(x, max_of_poe./length(my_str1), 0.75, 'r');
+set(gca,'xtick',[1:5],'xticklabel',where_com_poe);
+xlabel('Combinations')
+ylabel('Frequency')
+title('Frequency of combinations- The Raven (1800s)')
 %English 1900s
 url = "https://www.poetryfoundation.org/poems/44272/the-road-not-taken";
 code = webread(url);
@@ -88,4 +96,16 @@ my_road(my_road == "y") = [];
 my_road(my_road == "z") = [];
 [l,m,n] = unique(my_road);
 e = hist(n,length(l));
-max_of_road = maxk(e,10);
+max_of_road = maxk(e,5);
+where_max_road = zeros(1,5);
+for jj = 1:length(max_of_road)
+    where_max_road(jj) = find(e == max_of_road(jj)); 
+end
+where_com_road = l(where_max_road);
+subplot(2,2,2)
+x = 1:5;
+bar(x, max_of_road./length(my_road), 0.75, 'r');
+set(gca,'xtick',[1:5],'xticklabel',where_com_road);
+xlabel('Combinations')
+ylabel('Frequency')
+title('Frequency of combinations- The Road Not Taken (1900s)')
