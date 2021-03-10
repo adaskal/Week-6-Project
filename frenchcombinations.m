@@ -1,14 +1,18 @@
 %French 1800s
-url = "https://en.wikipedia.org/wiki/Les_Djinns_(poem)";
+url = "https://en.wikipedia.org/wiki/Les_Djinns_(poem)"; %adds in the url
 code = webread(url);
-str_les1 = extractHTMLText(code);
-str_les2 = lower(str_les1);
-str_les3 = str_les2(1:2895);
-str_les = strings(length(str_les3),1);
+str_les1 = extractHTMLText(code); %makes text into char
+str_les2 = lower(str_les1); %makes all parts of the char lowercase
+str_les3 = str_les2(1:2895); %removes extra words not directly in the poem
+str_les = strings(length(str_les3),1); %initializes str_les
+
+%makes str_poe1 a string array of all the combinations
 for o = 1 : length(str_les3) - 1
     str_les(o) = [str_les3(o),str_les3(o + 1)];
 end
 f = transpose(str_les);
+
+%the lines 16-58 remove all extra combinations not of two letters
 my_str_of_les = regexprep(f,'[^A-Za-z]+',' ');
 my_les = regexprep(my_str_of_les,'[^A-Za-z]+','');
 my_les(my_les == "") = [];
@@ -52,14 +56,18 @@ my_les(my_les == "w") = [];
 my_les(my_les == "x") = [];
 my_les(my_les == "y") = [];
 my_les(my_les == "z") = [];
+
+% 60 - 62 looks through my_les and finds the top 5 most used combinations
 [w,z,s] = unique(my_les);
 u = hist(s,length(w));
 max_of_les = maxk(u,5);
-test11 = find(u == 62);
-test22 = find(u == 51);
-test33 = find(u == 34);
-test44 = find(u == 33);
-where_com_les = [w(test11), w(test22), w(127), w(182), w(test44)];
+test11 = find(u == 62); %finds where u == max_of_les(1)
+test22 = find(u == 51); %finds where u == max_of_les(2)
+test33 = find(u == 34); %finds where u == max_of_les(3) %finds where u == max_of_les(4)
+test44 = find(u == 33); %finds where u == max_of_les(5)
+where_com_les = [w(test11), w(test22), w(127), w(182), w(test44)]; %makes string array of the top 5 combinations
+
+%makes one of the plots a bar graph with the data from 1800s
 h4 = figure;
 subplot(2,2,3)
 x = 1:5;
@@ -70,16 +78,20 @@ ylabel('Frequency')
 title('Frequency of combinations- Les_Djinns (1800s)')
  
 %French 1900s
-url = "https://fleursdumal.org/poem/200";
+url = "https://fleursdumal.org/poem/200"; %adds in the url
 code = webread(url);
-str_albatros1 = extractHTMLText(code);
-str_albatros2 = lower(str_albatros1);
-str_albatros3 = str_albatros2(74:809);
-str_albatros = strings(length(str_albatros3),1);
+str_albatros1 = extractHTMLText(code); %makes text into char 
+str_albatros2 = lower(str_albatros1); %makes all parts of the char lowercase
+str_albatros3 = str_albatros2(74:809); %removes extra words not directly in the poem
+str_albatros = strings(length(str_albatros3),1); %initializes str_albatros
+
+%makes str_albatros a string array of all the combinations
 for j = 1 : length(str_albatros3) - 1
     str_albatros(j) = [str_albatros3(j),str_albatros3(j + 1)];
 end
 g = transpose(str_albatros);
+
+%the lines 95-137 remove all extra combinations not of two letters
 my_str_of_albatros = regexprep(g,'[^A-Za-z]+',' ');
 my_albatros = regexprep(my_str_of_albatros,'[^A-Za-z]+','');
 my_albatros(my_albatros == "") = [];
@@ -123,6 +135,8 @@ my_albatros(my_albatros == "w") = [];
 my_albatros(my_albatros == "x") = [];
 my_albatros(my_albatros == "y") = [];
 my_albatros(my_albatros == "z") = [];
+
+% 140 - 146 looks through my_albatros and finds the top 5 most used combinations
 [ww,zz,ss] = unique(my_albatros);
 uu = hist(ss,length(ww));
 max_of_albatros = maxk(uu,5);
@@ -130,7 +144,10 @@ where_max_albatros = zeros(1,5);
 for jj = 1:length(max_of_albatros)
     where_max_albatros(jj) = find(uu == max_of_albatros(jj)); 
 end
-where_com_albatros = ww(where_max_albatros);
+
+where_com_albatros = ww(where_max_albatros); %makes string array of the top 5 combinations
+
+%creates a figure and then makes one of the plots a bar graph with the data from 1900s
 subplot(2,2,4)
 x = 1:5;
 bar(x, max_of_albatros./length(my_albatros), 0.75, 'r');
@@ -140,16 +157,20 @@ ylabel('Frequency')
 title('Frequency of combinations- L''Albatros (1900s)')
  
 %French 1700s
-url = "https://poesie.webnet.fr/lesgrandsclassiques/poemes/jacques_delille/les_jardins";
+url = "https://poesie.webnet.fr/lesgrandsclassiques/poemes/jacques_delille/les_jardins"; %adds in the url
 code = webread(url);
-str_jardins1 = extractHTMLText(code);
-str_jardins2 = lower(str_jardins1);
-str_jardins3 = str_jardins2(48:5585);
-str_jardins = strings(length(str_jardins3),1);
+str_jardins1 = extractHTMLText(code); %makes text into char
+str_jardins2 = lower(str_jardins1); %makes all parts of the char lowercase
+str_jardins3 = str_jardins2(48:5585); %removes extra words not directly in the poem
+str_jardins = strings(length(str_jardins3),1); %initializes str_jardins
+
+%makes str_jardins a string array of all the combinations
 for h = 1 : length(str_jardins3) - 1
     str_jardins(h) = [str_jardins3(h),str_jardins3(h + 1)];
 end
 ggg = transpose(str_jardins);
+
+%the lines 174-216 remove all extra combinations not of two letters
 my_str_of_jardins = regexprep(ggg,'[^A-Za-z]+',' ');
 my_jardins = regexprep(my_str_of_jardins,'[^A-Za-z]+','');
 my_jardins(my_jardins == "") = [];
@@ -193,6 +214,8 @@ my_jardins(my_jardins == "w") = [];
 my_jardins(my_jardins == "x") = [];
 my_jardins(my_jardins == "y") = [];
 my_jardins(my_jardins == "z") = [];
+
+% 219 - 225 looks through my_str1 and finds the top 5 most used combinations
 [wwww,zzzz,ssss] = unique(my_jardins);
 uuuu = hist(ssss,length(wwww));
 max_of_jardins = maxk(uuuu,5);
@@ -200,7 +223,9 @@ where_max_jardins = zeros(1,5);
 for hh = 1:length(max_of_jardins)
     where_max_jardins(hh) = find(uuuu == max_of_jardins(hh)); 
 end
-where_com_jardins = wwww(where_max_jardins);
+where_com_jardins = wwww(where_max_jardins); %makes string array of the top 5 combinations
+
+%creates a figure and then makes one of the plots a bar graph with the data from 1700s
 subplot(2,2,2)
 x = 1:5;
 bar(x, max_of_jardins./length(my_jardins), 0.75, 'r');
@@ -210,16 +235,20 @@ ylabel('Frequency')
 title('Frequency of combinations- Les jardins (1700s)')
  
 %French 1600s
-url = "https://www.poemhunter.com/poem/la-belle-vieille/";
-code = webread(url);
-str_la1 = extractHTMLText(code);
-str_la2 = lower(str_la1);
-str_la3 = str_la2(754:4132);
-str_la = strings(length(str_la3),1);
+url = "https://www.poemhunter.com/poem/la-belle-vieille/";  %adds in the url
+code = webread(url); 
+str_la1 = extractHTMLText(code); %makes text into char
+str_la2 = lower(str_la1); %makes all parts of the char lowercase
+str_la3 = str_la2(754:4132); %removes extra words not directly in the poem
+str_la = strings(length(str_la3),1); %initializes str_la
+
+%makes str_la a string array of all the combinations
 for aa = 1 : length(str_la3) - 1
     str_la(aa) = [str_la3(aa),str_la3(aa + 1)];
 end
 gg = transpose(str_la);
+
+%the lines 252-294 remove all extra combinations not of two letters
 my_str_of_la = regexprep(gg,'[^A-Za-z]+',' ');
 my_la = regexprep(my_str_of_la,'[^A-Za-z]+','');
 my_la(my_la == "") = [];
@@ -263,6 +292,8 @@ my_la(my_la == "w") = [];
 my_la(my_la == "x") = [];
 my_la(my_la == "y") = [];
 my_la(my_la == "z") = [];
+
+% 297 - 303 looks through my_road and finds the top 5 most used combinations
 [www,zzz,sss] = unique(my_la);
 uuu = hist(sss,length(www));
 max_of_la = maxk(uuu,5);
@@ -270,7 +301,9 @@ where_max_la = zeros(1,5);
 for aaa = 1:length(max_of_la)
     where_max_la(aaa) = find(uuu == max_of_la(aaa)); 
 end
-where_com_la = www(where_max_la);
+where_com_la = www(where_max_la); %makes string array of the top 5 combinations
+
+%makes one of the plots a bar graph with the data from 1600s
 subplot(2,2,1)
 x = 1:5;
 bar(x, max_of_la./length(my_la), 0.75, 'r');
