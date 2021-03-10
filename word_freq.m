@@ -20,13 +20,7 @@ v = cell2mat(v);
 [sorted_vals, sort_idx] = sort(v);
 sorted_keys = k(sort_idx);
 
-%words = sorted_keys;
-%freq = sorted_vals;
-
 for ii = 1:10
     words(ii) = sorted_keys(size(sorted_keys,2)-ii+1);
     freq(ii) = sorted_vals(size(sorted_vals,2)-ii+1);
 end
-
-words
-freq
