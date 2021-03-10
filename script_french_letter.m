@@ -37,7 +37,7 @@ x = 1:40;
 bar(x, letters1/length1, 0.75, 'r');
 set(gca,'xtick',[1:40],'xticklabel',{'A','Â','À','B','C','Ç','D','E','Ê','É','È','Ë','F','G','H','I','Ï','Î','J','K','L','M','N','O','Ô','Œ','P','Q','R','S','T','U','Ü','Û','Ù','V','W','X','Y','Z'});
 xlabel('Letters')
-ylabel('Frequency')
+ylabel('Percentage of total letters')
 title('Frequency of letters- La Belle Vieille (1600s)')
 
 subplot(2,2,2)
@@ -45,7 +45,7 @@ x = 1:40;
 bar(x, letters2/length2, 0.75, 'r');
 set(gca,'xtick',[1:40],'xticklabel',{'A','Â','À','B','C','Ç','D','E','Ê','É','È','Ë','F','G','H','I','Ï','Î','J','K','L','M','N','O','Ô','Œ','P','Q','R','S','T','U','Ü','Û','Ù','V','W','X','Y','Z'});
 xlabel('Letters')
-ylabel('Frequency')
+ylabel('Percentage of total letters')
 title('Frequency of letters- Les jardins (1700s)')
 
 subplot(2,2,3)
@@ -53,7 +53,7 @@ x = 1:40;
 bar(x, letters3/length3, 0.75, 'r');
 set(gca,'xtick',[1:40],'xticklabel',{'A','Â','À','B','C','Ç','D','E','Ê','É','È','Ë','F','G','H','I','Ï','Î','J','K','L','M','N','O','Ô','Œ','P','Q','R','S','T','U','Ü','Û','Ù','V','W','X','Y','Z'});
 xlabel('Letters')
-ylabel('Frequency')
+ylabel('Percentage of total letters')
 title('Frequency of letters- Le Djinns (1800s)')
 
 subplot(2,2,4)
@@ -61,5 +61,5 @@ x = 1:40;
 bar(x, letters4/length4, 0.75, 'r');
 set(gca,'xtick',[1:40],'xticklabel',{'A','Â','À','B','C','Ç','D','E','Ê','É','È','Ë','F','G','H','I','Ï','Î','J','K','L','M','N','O','Ô','Œ','P','Q','R','S','T','U','Ü','Û','Ù','V','W','X','Y','Z'});
 xlabel('Letters')
-ylabel('Frequency')
+ylabel('Percentage of total letters')
 title('Frequency of letters- L''Albatros (1900s)')

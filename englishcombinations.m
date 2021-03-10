@@ -60,7 +60,7 @@ x = 1:5;
 bar(x, max_of_poe./length(my_str1), 0.75, 'r');
 set(gca,'xtick',[1:5],'xticklabel',where_com_poe);
 xlabel('Combinations')
-ylabel('Frequency')
+ylabel('Percentage of total combinations')
 title('Frequency of combinations- The Raven (1800s)')
 
 %English 1900s
@@ -124,7 +124,7 @@ x = 1:5;
 bar(x, max_of_road./length(my_road), 0.75, 'r');
 set(gca,'xtick',[1:5],'xticklabel',where_com_road);
 xlabel('Combinations')
-ylabel('Frequency')
+ylabel('Percentage of total combinations')
 title('Frequency of combinations- The Road Not Taken (1900s)')
 
 %English 1600s
@@ -188,7 +188,7 @@ x = 1:5;
 bar(x, max_of_phoenix./length(my_phoenix), 0.75, 'r');
 set(gca,'xtick',[1:5],'xticklabel',where_com_phoenix);
 xlabel('Combinations')
-ylabel('Frequency')
+ylabel('Percentage of total combinations')
 title('Frequency of combinations- The Phoenix and the Turtle (1600s)')
 
 %English 1700s
@@ -252,5 +252,5 @@ x = 1:5;
 bar(x, max_of_imagination./length(my_imagination), 0.75, 'r');
 set(gca,'xtick',[1:5],'xticklabel',where_com_imagination);
 xlabel('Combinations')
-ylabel('Frequency')
+ylabel('Percentage of total combinations')
 title('Frequency of combinations- On Imagination  (1700s)')

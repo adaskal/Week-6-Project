@@ -74,7 +74,7 @@ x = 1:5;
 bar(x, max_of_les./length(my_les), 0.75, 'r');
 set(gca,'xtick',[1:5],'xticklabel',where_com_les);
 xlabel('Combinations')
-ylabel('Frequency')
+ylabel('Percentage of total combinations')
 title('Frequency of combinations- Les_Djinns (1800s)')
  
 %French 1900s
@@ -153,7 +153,7 @@ x = 1:5;
 bar(x, max_of_albatros./length(my_albatros), 0.75, 'r');
 set(gca,'xtick',[1:5],'xticklabel',where_com_albatros);
 xlabel('Combinations')
-ylabel('Frequency')
+ylabel('Percentage of total combinations')
 title('Frequency of combinations- L''Albatros (1900s)')
  
 %French 1700s
@@ -231,7 +231,7 @@ x = 1:5;
 bar(x, max_of_jardins./length(my_jardins), 0.75, 'r');
 set(gca,'xtick',[1:5],'xticklabel',where_com_jardins);
 xlabel('Combinations')
-ylabel('Frequency')
+ylabel('Percentage of total combinations')
 title('Frequency of combinations- Les jardins (1700s)')
  
 %French 1600s
@@ -309,5 +309,5 @@ x = 1:5;
 bar(x, max_of_la./length(my_la), 0.75, 'r');
 set(gca,'xtick',[1:5],'xticklabel',where_com_la);
 xlabel('Combinations')
-ylabel('Frequency')
+ylabel('Percentage of total combinations')
 title('Frequency of combinations- La Belle Vieille (1600s)')

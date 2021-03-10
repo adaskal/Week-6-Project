@@ -51,7 +51,7 @@ y = freq1;
 bar(x, y, 0.75, 'r');
 set(gca,'xtick',[1:10],'xticklabel',words1);
 xlabel('Words')
-ylabel('Frequency')
+ylabel('Percentage of total letters')
 title('Frequency of top 10 words- La Belle Vieille (1600s)')
 
 subplot(2,2,2)
@@ -60,7 +60,7 @@ y = freq2;
 bar(x, y, 0.75, 'r');
 set(gca,'xtick',[1:10],'xticklabel',words2);
 xlabel('Words')
-ylabel('Frequency')
+ylabel('Percentage of total letters')
 title('Frequency of top 10 words- Les jardins (1700s)')
 
 subplot(2,2,3)
@@ -69,7 +69,7 @@ y = freq3;
 bar(x, y, 0.75, 'r');
 set(gca,'xtick',[1:10],'xticklabel',words3);
 xlabel('Words')
-ylabel('Frequency')
+ylabel('Percentage of total letters')
 title('Frequency of top 10 words- Le Djinns (1800s)')
 
 subplot(2,2,4)
@@ -78,5 +78,5 @@ y = freq4;
 bar(x, y, 0.75, 'r');
 set(gca,'xtick',[1:10],'xticklabel',words4);
 xlabel('Words')
-ylabel('Frequency')
+ylabel('Percentage of total letters')
 title('Frequency of words- L''Albatros (1900s)')

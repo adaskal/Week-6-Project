@@ -364,7 +364,7 @@ x = 1:26; %positions 1 - 26
 bar(x, letter_values/length(str2), 0.8, 'r'); %create bar graph with standard x values, y increments equal to letter values/length of str2
 set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'});  %set each tick in x axis to equal letters A - Z
 xlabel('Letters')
-ylabel('Percentage of total words')
+ylabel('Percentage of total letters')
 title('Frequency of letters- The Raven (1800s)')
 
 subplot(2,2,4) %creates subplot with dimensions 2x2, puts this plot at position 4
@@ -372,7 +372,7 @@ x = 1:26; %positions 1 - 26
 bar(x, letter_values2/length(str4), 0.8, 'r');
 set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'});
 xlabel('Letters')
-ylabel('Percentage of total words')
+ylabel('Percentage of total letters')
 title('Frequency of letters- The Road Not Taken (1900s)')
 
 subplot(2,2,1) %creates subplot with dimensions 2x2, puts this plot at position 1
@@ -380,7 +380,7 @@ x = 1:26; %positions 1 - 26
 bar(x, letter_values3/length(str6), 0.8, 'r');
 set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'});
 xlabel('Letters')
-ylabel('Percentage of total words')
+ylabel('Percentage of total letters')
 title('Frequency of letters- The Phoenix and the Turtle (1600s)')
 
 subplot(2,2,2) %creates subplot with dimensions 2x2, puts this plot at position 2
@@ -388,7 +388,7 @@ x = 1:26; %positions 1 - 26
 bar(x, letter_values4/length(str8), 0.8, 'r');
 set(gca,'xtick',[1:26],'xticklabel',{'A','B','C','D','E','F','G','H','I','J','K','L','N','M','O','P','Q','R','S','T','U','V','W','X','Y','Z'});
 xlabel('Letters')
-ylabel('Percentage of total words')
+ylabel('Percentage of total letters')
 title('Frequency of letters- On Imagination  (1700s)')
 
 
