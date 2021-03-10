@@ -1,98 +1,85 @@
-function [letter_values, str_length] = letter_frequencies(url)
+function [letter_values, str_length] = letter_frequencies(str)
 %LETTER FREQUENCIES takes in an input url and outputs a vector containing 
 %the frequency of each letter
-code = webread(url);
-str = extractHTMLText(code);
-str2 = lower(str);
-if contains(str2, "share on facebook")
-    str3 = eraseBetween(str2, strfind(str2, "share on facebook"), length(str2));
-    if contains(str3, "source: poems on various subjects")
-        str3 = eraseBetween(str3, strfind(str3, "source: poems on various subjects"), length(str3));
-    end
-    if contains(str3, "n/a")
-        str3 = eraseBetween(str3, strfind(str3, "n/a"), length(str3));
-    end
-end
-
-str_length = length(str3);
+str_length = length(str);
 letter_values = zeros(1,26);
-for i = 1:length(str3)
-      if (str3(i) == 'a') 
+for i = 1:length(str)
+      if (str(i) == 'a') 
           letter_values(1) = letter_values(1)+1;
       end    
-      if (str3(i) == 'b') 
+      if (str(i) == 'b') 
           letter_values(2) = letter_values(2)+1;
       end
-      if (str3(i) == 'c') 
+      if (str(i) == 'c') 
           letter_values(3) = letter_values(3)+1;
       end    
-      if (str3(i) == 'd') 
+      if (str(i) == 'd') 
           letter_values(4) = letter_values(4)+1;
       end
-      if (str3(i) == 'e') 
+      if (str(i) == 'e') 
           letter_values(5) = letter_values(5)+1;
       end    
-      if (str3(i) == 'f') 
+      if (str(i) == 'f') 
           letter_values(6) = letter_values(6)+1;
       end
-      if (str3(i) == 'g') 
+      if (str(i) == 'g') 
           letter_values(7) = letter_values(7)+1;
       end    
-      if (str3(i) == 'h') 
+      if (str(i) == 'h') 
           letter_values(8) = letter_values(8)+1;
       end
-      if (str3(i) == 'i') 
+      if (str(i) == 'i') 
           letter_values(9) = letter_values(9)+1;
       end    
-      if (str3(i) == 'j') 
+      if (str(i) == 'j') 
           letter_values(10) = letter_values(10)+1;
       end
-      if (str3(i) == 'k') 
+      if (str(i) == 'k') 
           letter_values(11) = letter_values(11)+1;
       end    
-      if (str3(i) == 'l') 
+      if (str(i) == 'l') 
           letter_values(12) = letter_values(12)+1;
       end
-      if (str3(i) == 'm') 
+      if (str(i) == 'm') 
           letter_values(13) = letter_values(13)+1;
       end
-      if (str3(i) == 'n') 
+      if (str(i) == 'n') 
           letter_values(14) = letter_values(14)+1;
       end    
-      if (str3(i) == 'o') 
+      if (str(i) == 'o') 
           letter_values(15) = letter_values(15)+1;
       end
-      if (str3(i) == 'p') 
+      if (str(i) == 'p') 
           letter_values(16) = letter_values(16)+1;
       end    
-      if (str3(i) == 'q') 
+      if (str(i) == 'q') 
           letter_values(17) = letter_values(17)+1;
       end
-      if (str3(i) == 'r') 
+      if (str(i) == 'r') 
           letter_values(18) = letter_values(18)+1;
       end    
-      if (str3(i) == 's') 
+      if (str(i) == 's') 
           letter_values(19) = letter_values(19)+1;
       end
-      if (str3(i) == 't') 
+      if (str(i) == 't') 
           letter_values(20) = letter_values(20)+1;
       end    
-      if (str3(i) == 'u') 
+      if (str(i) == 'u') 
           letter_values(21) = letter_values(21)+1;
       end
-      if (str3(i) == 'v') 
+      if (str(i) == 'v') 
           letter_values(22) = letter_values(22)+1;
       end    
-      if (str3(i) == 'w') 
+      if (str(i) == 'w') 
           letter_values(23) = letter_values(23)+1;
       end
-      if (str3(i) == 'x') 
+      if (str(i) == 'x') 
           letter_values(24) = letter_values(24)+1;
       end    
-      if (str3(i) == 'y') 
+      if (str(i) == 'y') 
           letter_values(25) = letter_values(25)+1;
       end
-      if (str3(i) == 'z') 
+      if (str(i) == 'z') 
           letter_values(26) = letter_values(26)+1;
       end
 end
