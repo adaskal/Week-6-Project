@@ -6,11 +6,13 @@ str_com1 = lower(str_com); %makes all parts of the char lowercase
 str_com2 = str_com1(37:6465); %removes extra words not directly in the poem
 str_poe1 = strings(length(str_com2),1); %initializes str_poe1
 
-for i = 1 : length(str_com2) - 1 %makes str_poe1 a string array of all the combinations
+%makes str_poe1 a string array of all the combinations
+for i = 1 : length(str_com2) - 1 
     str_poe1(i) = [str_com2(i),str_com2(i + 1)];
 end
 a = transpose(str_poe1);
-%the lines 14-42 remove all extra combinations not of two letters
+
+%the lines 16-44 remove all extra combinations not of two letters
 my_str_of_1 = regexprep(a,'[^A-Za-z]+',' ');
 my_str1 = regexprep(my_str_of_1,'[^A-Za-z]+','');
 my_str1(my_str1 == "") = [];
@@ -40,7 +42,8 @@ my_str1(my_str1 == "w") = [];
 my_str1(my_str1 == "x") = [];
 my_str1(my_str1 == "y") = [];
 my_str1(my_str1 == "z") = [];
-% 43 - 50 looks through my_str1 and finds the top 5 most used combinations
+
+% 47 - 53 looks through my_str1 and finds the top 5 most used combinations
 [rt,ty,zs] = unique(my_str1);  
 uy = hist(zs,length(rt));
 max_of_poe = maxk(uy,5);
@@ -49,6 +52,7 @@ for ii = 1:length(max_of_poe)
     where_max_poe(ii) = find(uy == max_of_poe(ii)); 
 end
 where_com_poe = rt(where_max_poe); %makes string array of the top 5 combinations
+
 %creates a figure and then makes one of the plots a bar graph with the data from 1800s 
 h5 = figure; 
 subplot(2,2,3)
@@ -67,11 +71,13 @@ str_road2 = lower(str_road1); %makes all parts of the char lowercase
 str_road3 = str_road2(78:840); %removes extra words not directly in the poem
 str_road = strings(length(str_road3),1); %initializes str_road
 
-for j = 1 : length(str_road3) - 1 %makes str_road a string array of all the combinations
+%makes str_road a string array of all the combinations
+for j = 1 : length(str_road3) - 1 
     str_road(j) = [str_road3(j),str_road3(j + 1)];
 end
 b = transpose(str_road);
-%the lines 75-103 remove all extra combinations not of two letters
+
+%the lines 80-109 remove all extra combinations not of two letters
 my_str_of_road = regexprep(b,'[^A-Za-z]+',' ');
 my_road = regexprep(my_str_of_road,'[^A-Za-z]+','');
 my_road(my_road == "") = [];
@@ -101,7 +107,8 @@ my_road(my_road == "w") = [];
 my_road(my_road == "x") = [];
 my_road(my_road == "y") = [];
 my_road(my_road == "z") = [];
-% 105 - 111 looks through my_road and finds the top 5 most used combinations
+
+% 112 - 118 looks through my_road and finds the top 5 most used combinations
 [l,m,n] = unique(my_road);
 e = hist(n,length(l));
 max_of_road = maxk(e,5);
@@ -110,6 +117,7 @@ for jj = 1:length(max_of_road)
     where_max_road(jj) = find(e == max_of_road(jj)); 
 end
 where_com_road = l(where_max_road); %makes string array of the top 5 combinations
+
 %makes one of the plots a bar graph with the data from 1900s
 subplot(2,2,4)
 x = 1:5;
@@ -126,11 +134,14 @@ str_phoenix1 = extractHTMLText(code); %makes text into char
 str_phoenix2 = lower(str_phoenix1); %makes all parts of the char lowercase
 str_phoenix3 = str_phoenix2(58:2201); %removes extra words not directly in the poem
 str_phoenix = strings(length(str_phoenix3),1); %initializes str_phoenix
-for p = 1 : length(str_phoenix3) - 1 %makes str_phoenix a string array of all the combinations
+
+%makes str_phoenix a string array of all the combinations
+for p = 1 : length(str_phoenix3) - 1 
     str_phoenix(p) = [str_phoenix3(p),str_phoenix3(p + 1)];
 end
 c = transpose(str_phoenix);
-%the lines 134-162 remove all extra combinations not of two letters
+
+%the lines 145-173 remove all extra combinations not of two letters
 my_str_of_phoenix = regexprep(c,'[^A-Za-z]+',' ');
 my_phoenix = regexprep(my_str_of_phoenix,'[^A-Za-z]+','');
 my_phoenix(my_phoenix == "") = [];
@@ -160,7 +171,8 @@ my_phoenix(my_phoenix == "w") = [];
 my_phoenix(my_phoenix == "x") = [];
 my_phoenix(my_phoenix == "y") = [];
 my_phoenix(my_phoenix == "z") = [];
-% 164 - 170 looks through my_phoenix and finds the top 5 most used combinations
+
+% 176 - 178 looks through my_phoenix and finds the top 5 most used combinations
 [ll,mm,nn] = unique(my_phoenix);
 ee = hist(nn,length(ll));
 max_of_phoenix = maxk(ee,5);
@@ -169,6 +181,7 @@ help22 = find(ee == 46); %find where ee = max_of_phoenix(2)
 help33 = find(ee == 71); %find where ee = max_of_phoenix(1)
 help44 = find(ee == 25); %find where ee = max_of_phoenix(5)
 where_com_phoenix = [ll(help33), ll(help22), ll(53), ll(89), ll(help44)]; %makes string array of the top 5 combinations
+
 %makes one of the plots a bar graph with the data from 1600s
 subplot(2,2,1)
 x = 1:5;
@@ -185,11 +198,14 @@ str_imagination1 = extractHTMLText(code); %makes text into char
 str_imagination2 = lower(str_imagination1); %makes all parts of the char lowercase
 str_imagination3 = str_imagination2(43:2421); %removes extra words not directly in the poem
 str_imagination = strings(length(str_imagination3),1);  %initializes str_imagination
-for im = 1 : length(str_imagination3) - 1 %makes str_imagination a string array of all the combinations
+
+ %makes str_imagination a string array of all the combinations
+for im = 1 : length(str_imagination3) - 1
     str_imagination(im) = [str_imagination3(im),str_imagination3(im + 1)];
 end
 d = transpose(str_imagination);
-%the lines 193-221 remove all extra combinations not of two letters
+
+%the lines 208-237 remove all extra combinations not of two letters
 my_str_of_imagination = regexprep(d,'[^A-Za-z]+',' ');
 my_imagination = regexprep(my_str_of_imagination,'[^A-Za-z]+','');
 my_imagination(my_imagination == "") = [];
@@ -219,7 +235,8 @@ my_imagination(my_imagination == "w") = [];
 my_imagination(my_imagination == "x") = [];
 my_imagination(my_imagination == "y") = [];
 my_imagination(my_imagination == "z") = [];
-% 223 - 229 looks through my_road and finds the top 5 most used combinations
+
+% 239 - 246 looks through my_road and finds the top 5 most used combinations
 [lll,mmm,nnn] = unique(my_imagination);
 eee = hist(nnn,length(lll));
 max_of_imagination = maxk(eee,5);
@@ -228,6 +245,7 @@ for yy = 1:length(max_of_imagination)
     where_max_imagination(yy) = find(eee == max_of_imagination(yy)); 
 end
 where_com_imagination = lll(where_max_imagination); %makes string array of the top 5 combinations
+
 %makes one of the plots a bar graph with the data from 1600s
 subplot(2,2,2)
 x = 1:5;
