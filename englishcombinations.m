@@ -47,7 +47,7 @@ for ii = 1:length(max_of_poe)
 end
 where_com_poe = rt(where_max_poe);
 h5 = figure;
-subplot(2,2,1)
+subplot(2,2,3)
 x = 1:5;
 bar(x, max_of_poe./length(my_str1), 0.75, 'r');
 set(gca,'xtick',[1:5],'xticklabel',where_com_poe);
@@ -103,7 +103,7 @@ for jj = 1:length(max_of_road)
     where_max_road(jj) = find(e == max_of_road(jj)); 
 end
 where_com_road = l(where_max_road);
-subplot(2,2,2)
+subplot(2,2,4)
 x = 1:5;
 bar(x, max_of_road./length(my_road), 0.75, 'r');
 set(gca,'xtick',[1:5],'xticklabel',where_com_road);
@@ -154,19 +154,18 @@ my_phoenix(my_phoenix == "z") = [];
 [ll,mm,nn] = unique(my_phoenix);
 ee = hist(nn,length(ll));
 max_of_phoenix = maxk(ee,5);
-where_max_phoenix = zeros(1,5);
-% for pp = 1:length(max_of_phoenix)
-%     where_max_phoenix(pp) = find(ee == max_of_phoenix(pp)); 
-% end
-% where_com_phoenix = ll(where_max_phoenix);
-% subplot(2,2,3)
-% x = 1:5;
-% bar(x, max_of_phoenix./length(my_phoenix), 0.75, 'r');
-% set(gca,'xtick',[1:5],'xticklabel',where_com_phoenix);
-% xlabel('Combinations')
-% ylabel('Frequency')
-% title('Frequency of combinations- The Phoenix and the Turtle (1600s)')
-
+help11 = find(ee == 30);
+help22 = find(ee == 46);
+help33 = find(ee == 71);
+help44 = find(ee == 25);
+where_com_phoenix = [ll(help33), ll(help22), ll(53), ll(89), ll(help44)];
+subplot(2,2,1)
+x = 1:5;
+bar(x, max_of_phoenix./length(my_phoenix), 0.75, 'r');
+set(gca,'xtick',[1:5],'xticklabel',where_com_phoenix);
+xlabel('Combinations')
+ylabel('Frequency')
+title('Frequency of combinations- The Phoenix and the Turtle (1600s)')
 
 %English 1700s
 url = "https://www.poetryfoundation.org/poems/52632/on-imagination";
@@ -216,7 +215,7 @@ for yy = 1:length(max_of_road)
     where_max_imagination(yy) = find(e == max_of_road(yy)); 
 end
 where_com_imagination = lll(where_max_imagination);
-subplot(2,2,3)
+subplot(2,2,2)
 x = 1:5;
 bar(x, max_of_imagination./length(my_imagination), 0.75, 'r');
 set(gca,'xtick',[1:5],'xticklabel',where_com_imagination);
